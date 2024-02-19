@@ -6,9 +6,10 @@ from . forms import MovieForm
 
 # Create your views here.
 def index(request):
-    movie=Movie.objects.all()
+    movies=Movie.objects.all()
     context={
-        'movie_list':movie
+        'movie_list': movies
+
     }
     return render(request,'index.html',context)
 
